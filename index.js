@@ -5,10 +5,10 @@ Handlebars.registerHelper('comment_body', function() {
     return new Handlebars.SafeString("<strong>" + this.body + "</strong>")
   }
 })
- function loadIssues() {
-  
+
+function loadIssues() {
+
   let template = Handlebars.compile(document.getElementById("issue-template").innerHTML);
   let result = template(issues);
   document.getElementsByTagName("main")[0].innerHTML += result;
-  
-} 
+}
